@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background-color: #160F31;
+}
+
+#app, input {
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', 'Noto Sans CJK TC', 'Heiti TC', 'Microsoft JhengHei', 'Microsoft Yahei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  text-align: center;
+}
+
+#input {
+  --width: min(100vw, 500px);
+  position: absolute;
+  bottom: 50px;
+  width: var(--width);
+  left: calc((100vw - var(--width)) / 2);
+  font-size: 48px;
+  padding: 15px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+}
