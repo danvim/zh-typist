@@ -2,7 +2,7 @@ export interface Pool<T> {
   items: T[],
   itemsRemoved: T[],
   remove: (item: T) => void,
-  initialize: (prepare: (item: T) => void) => void,
+  reset: (prepare: (item: T) => void) => void,
   forEachRight: (consumer: (item: T, remove: () => void) => void) => void
 }
 
@@ -34,7 +34,7 @@ export const createPool = <T>(factory: () => T, length: number): Pool<T> => {
     items,
     itemsRemoved,
     remove,
-    initialize,
+    reset: initialize,
     forEachRight,
   }
 }

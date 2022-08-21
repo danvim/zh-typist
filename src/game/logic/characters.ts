@@ -34,7 +34,7 @@ export interface DropText {
   hasPassedBoundary: boolean
 }
 
-export const dropChar = (characterHeight: number, dropHeight: number, { elapsedTime, text }: DropText): void => {
+export const dropChar = (characterHeight: number, dropHeight: number, elapsedTime: number, text: PIXI.Container): void => {
   const minV = 1;
   const deceleration = 0.5 * (minV - initialV ** 2) / characterHeight
   const revealDuration = (minV - initialV) / deceleration
